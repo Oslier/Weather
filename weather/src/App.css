@@ -48,6 +48,8 @@
     width: 50rem;
 
     padding: 1rem;
+
+    transition: box-shadow ease-in-out 0.2s;
 }
 
 .searchBar:focus{
