@@ -7,8 +7,11 @@ function App() {
 
   const [temp, setTemp] = useState(0);
   const [input, setInput] = useState('');
+  const [weather, setWeather] = useState('');
+  const [imgage, setImage] = useState('');
 
-  let cityName = "Miami";
+
+  let cityName = input;
 
 
   const key = "509e28c5ef0b935055aa3d7630ccec35";
@@ -30,6 +33,7 @@ function App() {
         })
         .then(data => {
           setTemp(data.main.temp);
+          setWeather(data.weather[0].description)
           console.log(data);
         })
       }
@@ -48,7 +52,16 @@ function App() {
 
           <img src={sun} alt="" className="sun"/>
 
-          <span className="temp">{ (temp - 273.15).toFixed(2) } <span className="degrees">°C</span> </span>
+          <div className="info">
+            <h1>
+              {cityName}
+            </h1>
+            <div className="temp">{ (temp - 273.15).toFixed(2) }
+              <span className="degrees">°C</span>
+              
+            </div>
+            <div className="weather">{weather}</div>
+          </div>
           
         </div>
       </div>

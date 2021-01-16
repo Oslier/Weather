@@ -1,3 +1,8 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
 .container{
     height: 100vh;
     width: 100vw;
@@ -58,13 +63,19 @@
     box-shadow: 0 0 3pt 2pt red;
 }
 
-.temp{
+h1{
     font-size: 5em;
-    color: blue;
+    color: black;
+}
+.temp{
+    font-size: 2em;
+    color: black;
 }
 
 .degrees{
     font-size: 2rem;
-    position: relative;
-    bottom: 2rem;
+}
+
+.weather{
+    font-size: 2em;
 }
